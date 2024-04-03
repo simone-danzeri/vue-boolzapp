@@ -178,9 +178,30 @@
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
     padding: 50px 100px;
+    position: relative;
 }
 
+.sent{
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-align: start;
+    width: 30%;
+    top: 40px;
+    right: 70px;
+    position: absolute;
+    background-color: #d5f9ba;
+}
 
+.received{
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-align: start;
+    width: 30%;
+    top: 40px;
+    left: 70px;
+    position: absolute;
+    background-color: #fff;
+}
 /* SEND BAR */
 .send-bar{
     height: 60px;
