@@ -52,3 +52,37 @@
 .admin-actions:last-child {
   margin-right: 20px;
 }
+
+.notifications{
+    height: 75px;
+    background-color: rgb(142, 218, 252);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bell{
+    background-color: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    height: 60%;
+    margin: 10px;
+}
+.bell i{
+    font-size: 20px;
+    color: rgb(142, 218, 252);
+}
+
+.notifications-actions>span{
+    display: block;
+}
+
+.notifications-actions span:first-child{
+    font-weight: 600;
+}
+
+.notifications-actions span:last-child{
+    text-decoration: underline;
+    color: rgb(98, 98, 98);
+    font-size: 15px;
+}
