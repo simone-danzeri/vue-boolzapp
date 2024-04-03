@@ -52,7 +52,7 @@
                 <div class="chats-list">
                     <ol>
                         <!-- Stampo i singoli <li> dinamicamente con Vue -->
-                        <li v-for="eachContact,index in contacts">
+                        <li v-for="eachContact,index in contacts" @click = "changeChat(index)">
                             <div class="chats-list-img">
                                 <img :src="eachContact.avatar" alt="">
                             </div>

@@ -91,5 +91,9 @@ createApp({
       ],
     };
   },
-  methods: {},
+  methods: {
+    changeChat(i) {
+        this.chatIndex = i;
+    }
+  },
 }).mount("#app");
