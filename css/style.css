@@ -119,3 +119,41 @@
     border: 5px solid #f9f9f9;
     border-left: none;
 }
+
+/* CHAT LIST */
+
+.chats-list{
+    height: calc(95vh - 165px);
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+}
+
+.chats-list ol li{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.chats-list ol li:hover{
+    background-color: #e8e4e4;
+}
+
+.chats-list-img{
+    height: 70px;
+    padding: 10px;
+}
+
+.chats-list-img img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chats-list-user h2{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.chats-list-user small{
+    color: #b1b1b1;
+}
