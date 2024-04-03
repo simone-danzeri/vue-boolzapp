@@ -1,111 +1,126 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <!--Font Awesome link-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!--Font Awesome link-->
-  <!--Vue Js link-->
-  <script src='https://unpkg.com/vue@3'></script>
-  <!--Vue Js link-->
-  <title>Document</title>
-  <link rel='stylesheet' href='css/style.css'>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font Awesome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Font Awesome link-->
+    <!--Vue Js link-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!--Vue Js link-->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div id="app">
-        <div class="container">
-            <!-- Colonna sinistra con l'elenco delle chat -->
-            <div class="sidebar-chats-container">
-                <!-- Sezione con admin -->
-                <div class="admin-panel">
-                    <div class="admin-info flex-center">
-                        <img src="./img/avatar_io.jpg" alt="">
-                        <span>Sofia</span>
-                    </div>
-                    <div class="admin-actions flex-center">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- Sezione azzurra per le notifiche -->
-                <div class="notifications">
-                    <div class="bell flex-center">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div class="notifications-actions">
-                        <span>Ricevi notifiche di nuovi messaggi</span>
-                        <span>Attiva notifiche desktop</span>
-                    </div>
-                </div>
-                <!-- Search bar delle chat -->
-                <div class="search-bar">
-                    <button class="search-icon-container">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <div class="search">
-                        <input type="text" placeholder="Cerca o iniza una nuova chat">
-                    </div>
-                </div>
-                <!-- Chat List -->
-                <div class="chats-list">
-                    <ol>
-                        <!-- Stampo i singoli <li> dinamicamente con Vue -->
-                        <li v-for="eachContact,index in contacts" @click = "changeChat(index)">
-                            <div class="chats-list-img">
-                                <img :src="eachContact.avatar" alt="">
-                            </div>
-                            <div class="chats-list-user">
-                                <h2>{{ eachContact.name }}</h2>
-                                <small>Ultimo messaggio</small>
-                            </div>
-                        </li>
-                    </ol>
-                </div>
+      <div class="container">
+        <!-- Colonna sinistra con l'elenco delle chat -->
+        <div class="sidebar-chats-container">
+          <!-- Sezione con admin -->
+          <div class="admin-panel">
+            <div class="admin-info flex-center">
+              <img src="./img/avatar_io.jpg" alt="" />
+              <span>Sofia</span>
             </div>
-            <!-- Colonna destra con singole chat -->
-            <div class="chat-container">
-                <!-- Sezione top con info chat per ogni user -->
-                <div class="chat-user-top">
-                    <div class="user-info flex-center">
-                        <div class="chats-list-img">
-                            <img :src="contacts[chatIndex].avatar" alt="">
-                        </div>
-                        <div class="chats-list-user">
-                            <h2>{{ contacts[chatIndex].name }}</h2>
-                            <small>Ultimo messaggio</small>
-                        </div>
-                    </div>
-                    <div class="admin-actions flex-center">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-sharp fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- Sezione con la chat -->
-                <div class="chat">
-                    <div class="message-container" v-for="eachMessage,index in contacts[chatIndex].messages">
-                        <div class="message" :class="{'send': eachMessage.status === 'sent'}">
-                            <span>{{eachMessage.message}}</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Footer con barra per scrivere messaggio -->
-                <div class="send-bar">
-                    <div class="face flex-center">
-                        <i class="fa-regular fa-face-smile"></i>
-                    </div>
-                    <div class="send-mex">
-                        <input type="text" placeholder="Scrivi un messaggio">
-                    </div>
-                    <div class="vocal-audio flex-center">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-                </div>
+            <div class="admin-actions flex-center">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
+          </div>
+          <!-- Sezione azzurra per le notifiche -->
+          <div class="notifications">
+            <div class="bell flex-center">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div class="notifications-actions">
+              <span>Ricevi notifiche di nuovi messaggi</span>
+              <span>Attiva notifiche desktop</span>
+            </div>
+          </div>
+          <!-- Search bar delle chat -->
+          <div class="search-bar">
+            <button class="search-icon-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="search">
+              <input type="text" placeholder="Cerca o iniza una nuova chat" />
+            </div>
+          </div>
+          <!-- Chat List -->
+          <div class="chats-list">
+            <ol>
+              <!-- Stampo i singoli <li> dinamicamente con Vue -->
+              <li
+                v-for="eachContact,index in contacts"
+                @click="changeChat(index)"
+              >
+                <div class="chats-list-img">
+                  <img :src="eachContact.avatar" alt="" />
+                </div>
+                <div class="chats-list-user">
+                  <h2>{{ eachContact.name }}</h2>
+                  <small>Ultimo messaggio</small>
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
+        <!-- Colonna destra con singole chat -->
+        <div class="chat-container">
+          <!-- Sezione top con info chat per ogni user -->
+          <div class="chat-user-top">
+            <div class="user-info flex-center">
+              <div class="chats-list-img">
+                <img :src="contacts[chatIndex].avatar" alt="" />
+              </div>
+              <div class="chats-list-user">
+                <h2>{{ contacts[chatIndex].name }}</h2>
+                <small>Ultimo messaggio</small>
+              </div>
+            </div>
+            <div class="admin-actions flex-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-sharp fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- Sezione con la chat -->
+          <div class="chat">
+            <div
+              class="message-container"
+              v-for="eachMessage,index in contacts[chatIndex].messages"
+            >
+              <div
+                class="message"
+                :class="{'send': eachMessage.status === 'sent'}"
+              >
+                <span>{{eachMessage.message}}</span>
+              </div>
+            </div>
+          </div>
+          <!-- Footer con barra per scrivere messaggio -->
+          <div class="send-bar">
+            <div class="face flex-center">
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <div class="send-mex">
+              <input type="text" placeholder="Scrivi un messaggio" />
+            </div>
+            <div class="vocal-audio flex-center">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  <script type='text/javascript' src='js/script.js'></script>
-</body>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
 </html>

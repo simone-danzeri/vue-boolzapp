@@ -93,7 +93,7 @@ createApp({
   },
   methods: {
     changeChat(i) {
-        this.chatIndex = i;
-    }
+      this.chatIndex = i;
+    },
   },
 }).mount("#app");
