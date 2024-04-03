@@ -64,6 +64,26 @@
                     </ol>
                 </div>
             </div>
+            <!-- Colonna destra con singole chat -->
+            <div class="chat-container">
+                <!-- Sezione top con info chat per ogni user -->
+                <div class="chat-user-top">
+                    <div class="user-info flex-center">
+                        <div class="chats-list-img">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="chats-list-user">
+                            <h2>{{ contacts[chatIndex].name }}</h2>
+                            <small>Ultimo messaggio</small>
+                        </div>
+                    </div>
+                    <div class="admin-actions flex-center">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-sharp fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   <script type='text/javascript' src='js/script.js'></script>

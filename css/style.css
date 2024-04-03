@@ -53,107 +53,122 @@
   margin-right: 20px;
 }
 
-.notifications{
-    height: 75px;
-    background-color: rgb(142, 218, 252);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.notifications {
+  height: 75px;
+  background-color: rgb(142, 218, 252);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.bell{
-    background-color: white;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    height: 60%;
-    margin: 10px;
+.bell {
+  background-color: white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 60%;
+  margin: 10px;
 }
-.bell i{
-    font-size: 20px;
-    color: rgb(142, 218, 252);
-}
-
-.notifications-actions>span{
-    display: block;
+.bell i {
+  font-size: 20px;
+  color: rgb(142, 218, 252);
 }
 
-.notifications-actions span:last-child{
-    text-decoration: underline;
-    color: rgb(98, 98, 98);
-    font-size: 15px;
+.notifications-actions > span {
+  display: block;
+}
+
+.notifications-actions span:last-child {
+  text-decoration: underline;
+  color: rgb(98, 98, 98);
+  font-size: 15px;
 }
 
 /* Search-bar */
-.search-bar{
-    display: flex;
-    height: 40px;
-    width: 100%;
-    background-color: rgb(250, 250, 250);
+.search-bar {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
 }
 
-.search-bar button{
-    border: none;
-    border: 5px solid #f9f9f9;
-    border-right: 1px solid lightgray;
-    width: 20%;
+.search-bar button {
+  border: none;
+  border: 5px solid #f9f9f9;
+  border-right: 1px solid lightgray;
+  width: 20%;
 }
 
-.search-icon-container{
-    padding: 5px 8px;
-    width: 10%;
-    cursor: pointer;
-    background-color: rgb(250, 250, 250);
+.search-icon-container {
+  padding: 5px 8px;
+  width: 10%;
+  cursor: pointer;
+  background-color: rgb(250, 250, 250);
 }
 
-.search{
-    height: 40px;
-    width: 100%;
-    background-color: rgb(250, 250, 250);
+.search {
+  height: 40px;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
 }
 
-.search input{
-    padding: 5px 8px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border: 5px solid #f9f9f9;
-    border-left: none;
+.search input {
+  padding: 5px 8px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 5px solid #f9f9f9;
+  border-left: none;
 }
 
 /* CHAT LIST */
 
-.chats-list{
-    height: calc(95vh - 165px);
-    background-color: rgb(255, 255, 255);
-    overflow-y: scroll;
+.chats-list {
+  height: calc(95vh - 165px);
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
 }
 
-.chats-list ol li{
-    height: 70px;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
+.chats-list ol li {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
 }
 
-.chats-list ol li:hover{
-    background-color: #e8e4e4;
+.chats-list ol li:hover {
+  background-color: #e8e4e4;
 }
 
-.chats-list-img{
-    height: 70px;
-    padding: 10px;
+.chats-list-img {
+  height: 70px;
+  padding: 10px;
 }
 
-.chats-list-img img{
-    height: 50px;
-    border-radius: 50%;
+.chats-list-img img {
+  height: 50px;
+  border-radius: 50%;
 }
 
-.chats-list-user h2{
-    font-size: 22px;
-    font-weight: 500;
+.chats-list-user h2 {
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.chats-list-user small{
-    color: #b1b1b1;
+.chats-list-user small {
+  color: #b1b1b1;
+}
+
+/* CHAT */
+
+.chat-container {
+  width: 100%;
+  height: 100%;
+}
+
+.chat-user-top {
+  height: 50px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  justify-content: space-between;
+  border-left: 1px solid #b1b1b1;
 }
