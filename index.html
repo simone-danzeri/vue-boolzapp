@@ -85,10 +85,10 @@
                 </div>
                 <!-- Sezione con la chat -->
                 <div class="chat">
-                    <div class="message-container">
-                        <div class="message">Ciao</div>
-                        <div class="message">Ciao</div>
-                        <div class="message send">Fabio</div>
+                    <div class="message-container" v-for="eachMessage,index in contacts[chatIndex].messages">
+                        <div class="message" :class="{'send': eachMessage.status === 'sent'}">
+                            <span>{{eachMessage.message}}</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Footer con barra per scrivere messaggio -->
