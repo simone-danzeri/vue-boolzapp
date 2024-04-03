@@ -54,7 +54,7 @@
                         <!-- Stampo i singoli <li> dinamicamente con Vue -->
                         <li v-for="eachContact,index in contacts">
                             <div class="chats-list-img">
-                                <img src="./img/avatar_1.jpg" alt="">
+                                <img :src="eachContact.avatar" alt="">
                             </div>
                             <div class="chats-list-user">
                                 <h2>{{ eachContact.name }}</h2>
@@ -70,7 +70,7 @@
                 <div class="chat-user-top">
                     <div class="user-info flex-center">
                         <div class="chats-list-img">
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="contacts[chatIndex].avatar" alt="">
                         </div>
                         <div class="chats-list-user">
                             <h2>{{ contacts[chatIndex].name }}</h2>
