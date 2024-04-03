@@ -178,29 +178,27 @@
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
     padding: 50px 100px;
-    position: relative;
 }
 
-.sent{
-    padding: 10px 12px;
-    border-radius: 12px;
-    text-align: start;
-    width: 30%;
-    top: 40px;
-    right: 70px;
-    position: absolute;
+.message-container{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.message{
+    width: 250px;
+    min-height: 50px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 8px 5px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.send{
     background-color: #d5f9ba;
-}
-
-.received{
-    padding: 10px 12px;
-    border-radius: 12px;
-    text-align: start;
-    width: 30%;
-    top: 40px;
-    left: 70px;
-    position: absolute;
-    background-color: #fff;
+    margin-left: auto;
 }
 /* SEND BAR */
 .send-bar{
