@@ -52,13 +52,13 @@
                 <div class="chats-list">
                     <ol>
                         <!-- Stampo i singoli <li> dinamicamente con Vue -->
-                        <li>
+                        <li v-for="eachContact,index in contacts">
                             <div class="chats-list-img">
                                 <img src="./img/avatar_1.jpg" alt="">
                             </div>
                             <div class="chats-list-user">
-                                <h2>[Nome]</h2>
-                                <small>Ultimo accesso</small>
+                                <h2>{{ eachContact.name }}</h2>
+                                <small>Ultimo messaggio</small>
                             </div>
                         </li>
                     </ol>
