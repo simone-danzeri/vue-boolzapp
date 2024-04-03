@@ -1,43 +1,54 @@
 /* RESET */
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* MAIN */
-.container{
-    height: 95vh;
-    width: 90%;
-    display: flex;
+.container {
+  height: 95vh;
+  width: 90%;
+  display: flex;
 }
 #app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background:  linear-gradient(#009688 0% 15%, #dcdbd1 15% 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(#009688 0% 15%, #dcdbd1 15% 75%);
 }
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* CHAT BAR LEFT */
-.sidebar-chats-container{
-    width: calc(100% / 3);
-    height: 100%;
-}
-.admin-panel{
-    height: 50px;
-    background-color: rgb(234, 234, 234);
-    display: flex;
-    justify-content: space-between;
+.sidebar-chats-container {
+  width: calc(100% / 3);
+  height: 100%;
 }
 
-.admin-info img{
-    height: 45px;
-    border-radius: 50%;
-    margin: 0 5px 0 10px;
+.admin-panel {
+  height: 50px;
+  background-color: rgb(234, 234, 234);
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-info img {
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 5px 0 10px;
+}
+
+.admin-actions i {
+  margin-left: 20px;
+  color: #b1b1b1;
+  font-size: 18px;
+}
+
+.admin-actions:last-child {
+  margin-right: 20px;
 }
