@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       chatIndex: 0,
+      newText:"",
       contacts: [
         {
           name: "Michele",
@@ -95,5 +96,13 @@ createApp({
     changeChat(i) {
       this.chatIndex = i;
     },
+    addText(i) {
+      this.contacts[i].messages.push({
+        date: "",
+        message: this.newText,
+        status: "sent"
+      });
+      this.newText="";
+    }
   },
 }).mount("#app");
