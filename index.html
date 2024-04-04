@@ -51,7 +51,12 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <div class="search">
-              <input type="text" placeholder="Cerca o iniza una nuova chat" />
+              <input
+                type="text"
+                placeholder="Cerca o iniza una nuova chat"
+                v-model="searchedName"
+                @keyup = "searchName()"
+              />
             </div>
           </div>
           <!-- Chat List -->
@@ -61,6 +66,7 @@
               <li
                 v-for="eachContact,index in contacts"
                 @click="changeChat(index)"
+                v-show="eachContact.visible"
               >
                 <div class="chats-list-img">
                   <img :src="eachContact.avatar" alt="" />
@@ -112,9 +118,12 @@
               <i class="fa-regular fa-face-smile"></i>
             </div>
             <div class="send-mex">
-              <input type="text" placeholder="Scrivi un messaggio"
-              v-model="newText"
-              @keyup.enter="addText(chatIndex) , replyMessage(chatIndex)" />
+              <input
+                type="text"
+                placeholder="Scrivi un messaggio"
+                v-model="newText"
+                @keyup.enter="addText(chatIndex) , replyMessage(chatIndex)"
+              />
             </div>
             <div class="vocal-audio flex-center">
               <i class="fa-solid fa-microphone"></i>
@@ -126,4 +135,3 @@
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
-

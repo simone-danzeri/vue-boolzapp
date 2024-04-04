@@ -5,6 +5,8 @@ createApp({
     return {
       chatIndex: 0,
       newText: "",
+      searchedName: "",
+      isVisible: true,
       contacts: [
         {
           name: "Michele",
@@ -112,6 +114,14 @@ createApp({
           status: "received",
         });
       }, 1000);
+    },
+    searchName() {
+      // Devo verificare se il valore di this.searchedName è contenuto dentro le singole stringhe dei nomi
+      this.contacts.forEach(eachUser => {
+        if(!eachUser.name.toLowerCase().includes(this.searchedName.toLowerCase())) {
+          eachUser.visible = false;
+        }
+      });
     },
   },
 }).mount("#app");
