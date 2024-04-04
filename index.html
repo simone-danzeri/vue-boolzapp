@@ -114,7 +114,7 @@
             <div class="send-mex">
               <input type="text" placeholder="Scrivi un messaggio"
               v-model="newText"
-              @keyup.enter="addText(chatIndex)" />
+              @keyup.enter="addText(chatIndex) , textReply(chatIndex)" />
             </div>
             <div class="vocal-audio flex-center">
               <i class="fa-solid fa-microphone"></i>

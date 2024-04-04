@@ -103,6 +103,13 @@ createApp({
         status: "sent"
       });
       this.newText="";
+    },
+    replyMessage() {
+      const reply = "Okay";
+      console.log(reply);
+    },
+    textReply() {
+      setTimeout(this.replyMessage, 1000);
     }
   },
 }).mount("#app");
