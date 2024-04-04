@@ -105,8 +105,12 @@ createApp({
       this.newText="";
     },
     replyMessage() {
-      const reply = "Okay";
-      console.log(reply);
+      /* const reply = "Okay"; */
+      this.contacts[i].messages.push({
+        date: "",
+        message: "Okay",
+        status: "received"
+      });
     },
     textReply() {
       setTimeout(this.replyMessage, 1000);
