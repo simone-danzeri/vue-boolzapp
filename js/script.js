@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       chatIndex: 0,
-      newText:"",
+      newText: "",
       contacts: [
         {
           name: "Michele",
@@ -100,20 +100,18 @@ createApp({
       this.contacts[i].messages.push({
         date: "",
         message: this.newText,
-        status: "sent"
+        status: "sent",
       });
-      this.newText="";
+      this.newText = "";
     },
-    replyMessage() {
-      /* const reply = "Okay"; */
-      this.contacts[i].messages.push({
-        date: "",
-        message: "Okay",
-        status: "received"
-      });
+    replyMessage(i) {
+      setTimeout(() => {
+        this.contacts[i].messages.push({
+          date: "",
+          message: "Okay",
+          status: "received",
+        });
+      }, 1000);
     },
-    textReply() {
-      setTimeout(this.replyMessage, 1000);
-    }
   },
 }).mount("#app");
