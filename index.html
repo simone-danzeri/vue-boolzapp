@@ -83,7 +83,7 @@
               </div>
               <div class="chats-list-user">
                 <h2>{{ contacts[chatIndex].name }}</h2>
-                <small>Ultimo messaggio</small>
+                <small>Ultimo accesso oggi alle 12:00</small>
               </div>
             </div>
             <div class="admin-actions flex-center">
@@ -112,7 +112,9 @@
               <i class="fa-regular fa-face-smile"></i>
             </div>
             <div class="send-mex">
-              <input type="text" placeholder="Scrivi un messaggio" />
+              <input type="text" placeholder="Scrivi un messaggio"
+              v-model="newText"
+              @keyup.enter="addText(chatIndex)" />
             </div>
             <div class="vocal-audio flex-center">
               <i class="fa-solid fa-microphone"></i>
