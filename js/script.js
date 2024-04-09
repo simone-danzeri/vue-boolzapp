@@ -120,6 +120,8 @@ createApp({
       this.contacts.forEach(eachUser => {
         if(!eachUser.name.toLowerCase().includes(this.searchedName.toLowerCase())) {
           eachUser.visible = false;
+        } else {
+          eachUser.visible = true;
         }
       });
     },
